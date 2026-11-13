@@ -6,7 +6,7 @@
 > action was set to reboot: from 0.2.0 the addon powers the system off instead, and the event log says so once. A Raspberry
 > Pi then starts again only when its power is cycled.
 
-A **client for Network UPS Tools (NUT)** for [openccu-lite](https://github.com/hobbyquaker/openccu-lite): it connects
+A **client for Network UPS Tools (NUT)** for [openccu-lite](https://github.com/openccu-lite/openccu-lite): it connects
 to the `upsd` that has your UPS – a NAS, a Proxmox host, a Raspberry Pi at the UPS's USB cable –, shows the UPS's
 state and **shuts the system down cleanly** before the UPS runs out of energy. That protects the SD card, the file
 system and the device files of the radio interfaces.
@@ -46,7 +46,7 @@ system and the device files of the radio interfaces.
 
 ## Installation
 
-1. Install the package `nut-<arch>-<version>.tar.gz` from the [releases page](https://github.com/hobbyquaker/lite-addon-nut/releases)
+1. Install the package `nut-<arch>-<version>.tar.gz` from the [releases page](https://github.com/openccu-lite/lite-addon-nut/releases)
    through the system's Addons page. The addon is not in the catalogue yet.
 2. On the addon's page (*UPS* in the addon menu, or *Settings* on the Addons page) enter the upsd under **Settings →
    Servers** (host, port, a user and password when needed, STARTTLS) and press **Test connection**: the answer names

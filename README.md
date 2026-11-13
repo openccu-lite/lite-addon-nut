@@ -6,7 +6,7 @@
 > Update. War als Aktion ein Neustart eingestellt: ab 0.2.0 fährt das Addon das System stattdessen herunter, und das
 > Ereignisprotokoll sagt es einmal. Ein Raspberry Pi startet danach erst wieder, wenn der Strom aus- und eingeschaltet wird.
 
-Ein **Client für Network UPS Tools (NUT)** für [openccu-lite](https://github.com/hobbyquaker/openccu-lite): Er
+Ein **Client für Network UPS Tools (NUT)** für [openccu-lite](https://github.com/openccu-lite/openccu-lite): Er
 verbindet sich mit dem `upsd`, an dem Ihre USV hängt – ein NAS, ein Proxmox-Host, ein Raspberry Pi am USB-Kabel der
 USV –, zeigt den Zustand der USV und **fährt das System sauber herunter**, bevor der USV die Energie ausgeht. Das
 schützt die SD-Karte, das Dateisystem und die Gerätedateien der Funkschnittstellen.
@@ -46,7 +46,7 @@ schützt die SD-Karte, das Dateisystem und die Gerätedateien der Funkschnittste
 
 ## Installation
 
-1. Das Paket `nut-<arch>-<version>.tar.gz` von der [Releases-Seite](https://github.com/hobbyquaker/lite-addon-nut/releases)
+1. Das Paket `nut-<arch>-<version>.tar.gz` von der [Releases-Seite](https://github.com/openccu-lite/lite-addon-nut/releases)
    über die Addons-Seite des Systems installieren. Das Addon steht vorerst nicht im Katalog.
 2. Auf der Addon-Seite (*USV* im Addon-Menü oder *Einstellungen* auf der Addons-Seite) unter **Einstellungen → Server**
    den upsd eintragen (Host, Port, bei Bedarf Benutzer und Passwort, STARTTLS) und mit **Verbindung testen** prüfen:
