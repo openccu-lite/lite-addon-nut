@@ -33,11 +33,13 @@ func TestManifest(t *testing.T) {
 			t.Errorf("%s is never granted to an addon", s)
 		}
 	}
-	if m.Description["de"] == "" || m.Description["en"] == "" || m.Runtime.Note["de"] == "" || m.Runtime.Note["en"] == "" {
-		t.Error("the description and the note in both languages")
+	if m.Description["de"] == "" || m.Description["en"] == "" || m.Runtime.Technical["de"] == "" || m.Runtime.Technical["en"] == "" ||
+		m.Runtime.Note["de"] == "" || m.Runtime.Note["en"] == "" {
+		t.Error("the description, the note and the technical text in both languages")
 	}
-	// the note is the catalogue's text for users (occulited task 188), no longer the technical account
-	// of scopes, ports and contacts; those are the manifest's keys
+	if !strings.Contains(m.Runtime.Technical["en"], "power:halt") {
+		t.Error("the technical text explains the scope")
+	}
 }
 
 // The manifest's version is the changelog's newest.
