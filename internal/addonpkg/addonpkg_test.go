@@ -36,9 +36,8 @@ func TestManifest(t *testing.T) {
 	if m.Description["de"] == "" || m.Description["en"] == "" || m.Runtime.Note["de"] == "" || m.Runtime.Note["en"] == "" {
 		t.Error("the description and the note in both languages")
 	}
-	if !strings.Contains(m.Runtime.Note["en"], "power:halt") {
-		t.Error("the note explains the scope")
-	}
+	// the note is the catalogue's text for users (occulited task 188), no longer the technical account
+	// of scopes, ports and contacts; those are the manifest's keys
 }
 
 // The manifest's version is the changelog's newest.
